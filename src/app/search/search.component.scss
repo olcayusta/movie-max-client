@@ -1,0 +1,28 @@
+form {
+  padding: 56px 4%;
+  margin: 24px 0;
+}
+
+mat-form-field {
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+}
+
+.carousel {
+  overflow: auto;
+  scroll-snap-type: x proximity;
+  display: flex;
+  scroll-behavior: smooth;
+}
+
+figure {
+  margin: 0;
+  padding: 0 4px;
+  scroll-snap-align: center;
+}
+
+img {
+  display: block;
+
+}

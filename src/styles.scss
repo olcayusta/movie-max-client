@@ -1,0 +1,44 @@
+@import "light_theme";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+
+// Reset.css
+mat-sidenav-container, mat-sidenav-content {
+  min-height: 100vh;
+}
+
+mat-sidenav {
+  min-height: 100vh;
+}
+
+mat-sidenav {
+  width: 364px;
+}
+
+mat-nav-list {
+  padding-bottom: 8px;
+}
+
+.mat-button {
+  padding: 0 8px !important;
+}
+
+.flex-spacer {
+  flex: 1 0 auto;
+}
+
+.menu-button {
+  margin-left: -8px !important;
+}
+
+.dark-theme {
+  @import "dark_theme";
+}

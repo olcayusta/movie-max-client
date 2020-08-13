@@ -1,0 +1,33 @@
+mat-toolbar {
+  background-color: transparent;
+  height: 56px;
+}
+
+:host ::ng-deep .mat-list-item-content {
+  padding: 0 64px !important;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.4px;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.close-button {
+  margin-left: 40px;
+}
+
+mat-divider {
+  margin-left: 64px;
+  margin-right: 24px;
+}
+
+@media (max-width: 599px) {
+  .close-button {
+    margin-left: 0;
+  }
+
+  :host ::ng-deep .mat-list-item-content {
+    padding: 0 24px !important;
+  }
+}

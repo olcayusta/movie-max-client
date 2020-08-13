@@ -1,0 +1,39 @@
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 24px;
+}
+
+::ng-deep .mat-dialog-container {
+  // padding: 48px 40px 128px 40px !important;
+
+  padding-bottom: 128px !important;
+}
+
+mat-form-field:last-child {
+  margin-top: 16px;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: -0.03em;
+}
+
+mat-form-field {
+  font-family: Inter, sans-serif;
+}
+
+.mat-dialog-actions {
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mat-dialog-actions button {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px;
+  font-weight: 500;
+}

@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Oturum aç</h1>
+<div mat-dialog-content>
+  <!-- <p>sign-in-dialog works!</p>-->
+  <form [formGroup]="form" autocomplete="off" spellcheck="false">
+    <mat-form-field>
+      <mat-label>E-posta</mat-label>
+      <input matInput formControlName="email">
+      <mat-error *ngIf="form.get('email').hasError('required')">Enter in the format: name@example.com</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Şifre</mat-label>
+      <input type="password" matInput formControlName="password">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <div>
+    <button mat-raised-button color="primary" (click)="submit()">Giriş yap</button>
+  </div>
+</div>

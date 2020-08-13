@@ -1,0 +1,10 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [autoFocus]="false" [fixedInViewport]="true" (openedStart)="openedStart()" (closedStart)="closedStart()">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content cdkScrollable>
+    <app-top-bar (toggleSidenav)="sidenav.toggle()"></app-top-bar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

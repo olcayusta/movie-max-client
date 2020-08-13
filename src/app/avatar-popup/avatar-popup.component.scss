@@ -1,0 +1,37 @@
+.user-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 650;
+  font-size: 1.2rem;
+  letter-spacing: -0.018em;
+}
+
+.header {
+  padding: 16px 16px;
+
+  img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+mat-card {
+  padding: 0;
+  min-width: 304px;
+}
+
+.mat-list-item {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+
+  span {
+    letter-spacing: -0.6px;
+  }
+}
+
+.my-popup {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}

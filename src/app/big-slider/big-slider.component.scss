@@ -1,0 +1,16 @@
+img {
+  display: block;
+}
+
+.big-slider-items {
+  display: flex;
+  flex-direction: row;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.big-slider-items::-webkit-scrollbar {
+  display: none;
+}

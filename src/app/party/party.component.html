@@ -1,0 +1,48 @@
+<div class="party-page dark-theme">
+  <div class="video-box">
+    <video id="video" width="320" height="240" controls (play)="onPlay()" (pause)="onPause()">
+      <source src="https://d2qguwbxlx1sbt.cloudfront.net/TextInMotion-VideoSample-1080p.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="chat-box mat-elevation-z4">
+
+    <div>
+      <div class="box-head">
+        <div class="chat-title">Chat</div>
+        <button mat-icon-button matTooltip="Kopyala">
+          <mat-icon>link</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div>
+      <div class="chat-items">
+        <div class="chat-item">
+          <img class="user-img" src="https://a.rsg.sc/s/RDR2/n/rdr2_karen_jones_256x256.png" alt="">
+          <div class="chat-post">Selam</div>
+        </div>
+        <div class="chat-item">
+          <img class="user-img" src="https://a.rsg.sc/s/GTAVCAnniversary/n/GTAVC36.png" alt="">
+          <div class="chat-post">Selamlar</div>
+        </div>
+        <div class="chat-item">
+          <img class="user-img" src="https://a.rsg.sc/s/MaxPayne3/n/MP3_33.png" alt="">
+          <div class="chat-post">Aleyküm selam</div>
+        </div>
+        <div class="chat-item" *ngFor="let msg of messages">
+          <div class="user-no-photo" [ngStyle]="{backgroundColor: msg.bgColor}">{{msg.char}}</div>
+          <div class="chat-post">{{msg.msg}}</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="chat-message">
+        <form (submit)="onSubmit()" autocomplete="off" spellcheck="false">
+          <mat-form-field floatLabel="never" color="accent">
+            <mat-label>Type a message</mat-label>
+            <input matInput [formControl]="msgCtrl">
+          </mat-form-field>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

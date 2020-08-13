@@ -1,0 +1,44 @@
+<mat-toolbar class="primary-toolbar">
+  <div class="topbar-left">
+    <a mat-icon-button (click)="toggleSidenav.emit()" class="menu-button">
+      <app-menu-icon></app-menu-icon>
+    </a>
+    <button mat-icon-button class="search-button" routerLink="/search">
+      <app-search-icon></app-search-icon>
+    </button>
+  </div>
+
+  <a routerLink="/" class="title-link">
+    <span class="app-title">Movie Max</span>
+  </a>
+
+  <ng-container *ngIf="isLoggedIn | async;else noLoggin">
+    <div class="topbar-right">
+    <!--  <button mat-icon-button>
+        <mat-icon>brightness_4</mat-icon>
+      </button>-->
+     <!-- <mat-slide-toggle color="primary" (change)="toggleChange($event)"></mat-slide-toggle>-->
+      <button class="avatar-button reset-button" role="button" aria-label="Account" #avatarButton="cdkOverlayOrigin" cdkOverlayOrigin (click)="openPopup($event)"
+           matTooltip="Olcay Usta">
+        <img class="avatar" src="https://yabancidizi.vip/uploads/users/15e62d84ee3fb8.jpg" alt="Feyzoş">
+      </button>
+      <ng-template cdkConnectedOverlay
+                   [cdkConnectedOverlayOrigin]="avatarButton"
+                   (attach)="onAttached()"
+                   (detach)="onDetached()"
+                   (overlayOutsideClick)="overlayOutsideClicked($event)"
+                   [cdkConnectedOverlayOpen]="isOpen">
+        <app-avatar-popup></app-avatar-popup>
+      </ng-template>
+    </div>
+  </ng-container>
+</mat-toolbar>
+
+<ng-template #noLoggin>
+  <div class="topbar-right">
+    <button mat-button class="sign-in-button" (click)="openSignInDialog()">
+      Oturum aç
+    </button>
+  </div>
+</ng-template>
+

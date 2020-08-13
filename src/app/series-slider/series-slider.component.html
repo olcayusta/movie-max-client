@@ -1,0 +1,38 @@
+<div class="default-title">
+  <h2>{{title}}</h2>
+</div>
+
+<div class="default-slider">
+  <div class="default-items horizontal-list" id="slider" #sliderElement>
+    <div class="item" *ngFor="let item of items" routerLink="/watch/xyz">
+      <div class="item-img-outer" [class.item-img-outer2]="type === 'series'">
+        <div class="item-img-inner">
+          <div class="item-background">
+            <img class="item-img" src="{{item.img}}" alt="" loading="lazy">
+          </div>
+        </div>
+        <div class="play-button">
+          <button mat-icon-button disableRipple>
+            <mat-icon>play_arrow</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="item-details">
+        <div class="item-title">{{item.title}}</div>
+      </div>
+    </div>
+  </div>
+
+  <ng-container *ngIf="scrollStatus === 1 || scrollStatus === 0">
+    <button mat-fab class="slider-button-left" (click)="back()">
+      <app-chevron-left-icon></app-chevron-left-icon>
+    </button>
+  </ng-container>
+
+  <ng-container *ngIf="scrollStatus === 2 || scrollStatus === 0">
+    <button mat-fab class="slider-button-right" (click)="next()">
+      <app-chevron-right-icon></app-chevron-right-icon>
+    </button>
+  </ng-container>
+
+</div>
