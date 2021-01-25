@@ -1,8 +1,8 @@
-import {Injectable} from '@angular/core';
-import {webSocket} from 'rxjs/webSocket';
+import { Injectable } from '@angular/core';
+import { webSocket } from 'rxjs/webSocket';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SocketService {
   subject = webSocket('ws://localhost:9001');

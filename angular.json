@@ -34,13 +34,11 @@
               "src/styles.scss",
               {
                 "input": "src/light_theme.scss",
-                "lazy": true,
                 "bundleName": "light_theme",
                 "inject": true
               },
               {
                 "input": "src/dark_theme.scss",
-                "lazy": true,
                 "bundleName": "dark_theme",
                 "inject": true
               }
@@ -145,6 +143,7 @@
   },
   "defaultProject": "movie-max",
   "cli": {
-    "analytics": "f0dbfcd2-e146-431c-80f7-4a0ad7cf2dd5"
+    "analytics": "f0dbfcd2-e146-431c-80f7-4a0ad7cf2dd5",
+    "packageManager": "yarn"
   }
 }
